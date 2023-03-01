@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 import BgImg from '../../img/picture.svg';
 import LogoImg from '../../img/logo.svg';
@@ -20,18 +20,23 @@ export const UserCard = () => {
   const [count, setCount] = useState(100500);
   const [isFollow, setIsFollow] = useState('Follow');
   const [active, setActive] = useState(false);
+  const [colorPlace, setcolorPlace] = useState(false);
+
+  useEffect(() => {
+    setActive(false);
+  }, []);
 
   const updateCount = () => {
     if (isFollow === 'Follow') {
       setCount(prevValue => prevValue + 1);
       setIsFollow('Following');
-      setActive(false);
+      //   setActive(false);
     }
 
     if (isFollow !== 'Follow') {
       setCount(prevValue => prevValue - 1);
       setIsFollow('Follow');
-      setActive(true);
+      //   setActive(true);
     }
 
     console.log(count);
@@ -50,12 +55,12 @@ export const UserCard = () => {
       <CardButton
         type="button"
         onClick={updateCount}
-        // active={active}
-        style={
-          active
-            ? { backgroundColor: '#ebd8ff' }
-            : { backgroundColor: '#5cd3a8' }
-        }
+        style={{ backgroundColor: colorPlace ? '#ebd8ff' : '#5cd3a8' }}
+        // style={
+        //   active
+        //     ? { backgroundColor: '#ebd8ff' }
+        //     : { backgroundColor: '#5cd3a8' }
+        // }
       >
         {isFollow}
       </CardButton>

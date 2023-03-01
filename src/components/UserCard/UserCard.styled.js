@@ -82,8 +82,4 @@ export const CardButton = styled.button`
   font-size: 18px;
   line-height: 1.22;
   text-transform: uppercase;
-
-  /* &[active] {
-    background-color: #ebd8ff;
-  } */
 `;
