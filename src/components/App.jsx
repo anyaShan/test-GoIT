@@ -6,7 +6,6 @@ export const App = () => {
   return (
     <Container>
       <UserCard />
-      React homework template
     </Container>
   );
 };

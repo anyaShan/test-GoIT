@@ -3,7 +3,6 @@ import styled from 'styled-components';
 export const CardContainer = styled.div`
   position: relative;
   width: 380px;
-  height: 460px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -55,4 +54,36 @@ export const CardAvatar = styled.img`
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+`;
+
+export const CardTweets = styled.p`
+  margin-bottom: 16px;
+`;
+
+export const CardCount = styled.p`
+  margin-bottom: 26px;
+`;
+
+export const CardButton = styled.button`
+  padding: 14px 56px;
+  text-align: center;
+  border: 0;
+  border-radius: 10px;
+  cursor: pointer;
+
+  background-color: #ebd8ff;
+  color: #373737;
+  box-shadow: 0px 3.43693px 3.43693px rgba(0, 0, 0, 0.25);
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  font-family: 'Montserrat';
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.22;
+  text-transform: uppercase;
+
+  &:hover {
+    background-color: #5cd3a8;
+  }
 `;

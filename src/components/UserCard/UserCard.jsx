@@ -9,6 +9,9 @@ import {
   CardAvatarWrapp,
   CardAvatarLine,
   CardAvatar,
+  CardTweets,
+  CardCount,
+  CardButton,
 } from './UserCard.styled';
 
 export const UserCard = () => {
@@ -20,9 +23,9 @@ export const UserCard = () => {
         <CardAvatar src={BoyImg} alt="boy" />
         <CardAvatarLine></CardAvatarLine>
       </CardAvatarWrapp>
-      <p>777 tweets</p>
-      <p>100,500 Followers</p>
-      <button type="button">Follow</button>
+      <CardTweets>777 tweets</CardTweets>
+      <CardCount>100,500 Followers</CardCount>
+      <CardButton type="button">Follow</CardButton>
     </CardContainer>
   );
 };
