@@ -83,7 +83,7 @@ export const CardButton = styled.button`
   line-height: 1.22;
   text-transform: uppercase;
 
-  &:hover {
-    background-color: #5cd3a8;
-  }
+  /* &[active] {
+    background-color: #ebd8ff;
+  } */
 `;
