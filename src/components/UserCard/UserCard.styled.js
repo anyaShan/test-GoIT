@@ -70,8 +70,6 @@ export const CardButton = styled.button`
   border: 0;
   border-radius: 10px;
   cursor: pointer;
-
-  /* background-color: #ebd8ff; */
   color: #373737;
   box-shadow: 0px 3.43693px 3.43693px rgba(0, 0, 0, 0.25);
 
