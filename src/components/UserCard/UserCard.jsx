@@ -19,24 +19,20 @@ import {
 export const UserCard = () => {
   const [count, setCount] = useState(100500);
   const [isFollow, setIsFollow] = useState('Follow');
-  const [active, setActive] = useState(false);
-  const [colorPlace, setcolorPlace] = useState(false);
-
-  useEffect(() => {
-    setActive(false);
-  }, []);
+  const [colorPlace, setcolorPlace] = useState(true);
 
   const updateCount = () => {
     if (isFollow === 'Follow') {
       setCount(prevValue => prevValue + 1);
       setIsFollow('Following');
-      //   setActive(false);
+      setcolorPlace(false);
     }
 
     if (isFollow !== 'Follow') {
       setCount(prevValue => prevValue - 1);
+
       setIsFollow('Follow');
-      //   setActive(true);
+      setcolorPlace(true);
     }
 
     console.log(count);
@@ -56,11 +52,6 @@ export const UserCard = () => {
         type="button"
         onClick={updateCount}
         style={{ backgroundColor: colorPlace ? '#ebd8ff' : '#5cd3a8' }}
-        // style={
-        //   active
-        //     ? { backgroundColor: '#ebd8ff' }
-        //     : { backgroundColor: '#5cd3a8' }
-        // }
       >
         {isFollow}
       </CardButton>
