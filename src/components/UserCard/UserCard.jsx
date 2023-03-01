@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 import BgImg from '../../img/picture.svg';
 import LogoImg from '../../img/logo.svg';
@@ -38,6 +38,9 @@ export const UserCard = () => {
     console.log(count);
   };
 
+  const validCount = new Intl.NumberFormat('en-US').format(count);
+  console.log(validCount);
+
   return (
     <CardContainer>
       <CardLogo src={LogoImg} alt="logo" />
@@ -47,7 +50,7 @@ export const UserCard = () => {
         <CardAvatarLine></CardAvatarLine>
       </CardAvatarWrapp>
       <CardTweets>777 tweets</CardTweets>
-      <CardCount>{count} Followers</CardCount>
+      <CardCount>{validCount} Followers</CardCount>
       <CardButton
         type="button"
         onClick={updateCount}
