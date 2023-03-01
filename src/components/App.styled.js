@@ -11,4 +11,13 @@ export const Container = styled.div`
   justify-content: center;
   align-items: center;
   /* gap: 25px; */
+
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  text-transform: uppercase;
+
+  color: #ebd8ff;
 `;
