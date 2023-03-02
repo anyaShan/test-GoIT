@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 import BgImg from '../../img/picture.svg';
 import LogoImg from '../../img/logo.svg';
@@ -21,25 +21,34 @@ export const UserCard = () => {
   const [isFollow, setIsFollow] = useState('Follow');
   const [colorPlace, setcolorPlace] = useState(true);
 
+  useEffect(() => {
+    setCount(JSON.parse(localStorage.getItem('count')));
+    setIsFollow(localStorage.getItem('isFollow'));
+    setcolorPlace(JSON.parse(localStorage.getItem('colorPlace')));
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem('count', count);
+    localStorage.setItem('isFollow', isFollow);
+    localStorage.setItem('colorPlace', colorPlace);
+  }, [colorPlace, count, isFollow]);
+
   const updateCount = () => {
     if (isFollow === 'Follow') {
-      setCount(prevValue => prevValue + 1);
+      setCount(count + 1);
       setIsFollow('Following');
       setcolorPlace(false);
     }
 
     if (isFollow !== 'Follow') {
-      setCount(prevValue => prevValue - 1);
+      setCount(count - 1);
 
       setIsFollow('Follow');
       setcolorPlace(true);
     }
-
-    console.log(count);
   };
 
   const validCount = new Intl.NumberFormat('en-US').format(count);
-  console.log(validCount);
 
   return (
     <CardContainer>
