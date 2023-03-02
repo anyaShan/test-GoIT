@@ -16,8 +16,10 @@ import {
   CardButton,
 } from './UserCard.styled';
 
-export const UserCard = () => {
-  const [count, setCount] = useState(100500);
+export const UserCard = ({ item }) => {
+  const { user, tweets, followers, avatar } = item;
+
+  const [count, setCount] = useState(followers);
   const [isFollow, setIsFollow] = useState('Follow');
   const [colorPlace, setColorPlace] = useState(true);
 
@@ -58,7 +60,8 @@ export const UserCard = () => {
         <CardAvatar src={BoyImg} alt="boy" />
         <CardAvatarLine></CardAvatarLine>
       </CardAvatarWrapp>
-      <CardTweets>777 tweets</CardTweets>
+      <p>{user}</p>
+      <CardTweets>{tweets} tweets</CardTweets>
       <CardCount>{validCount} Followers</CardCount>
       <CardButton
         type="button"
