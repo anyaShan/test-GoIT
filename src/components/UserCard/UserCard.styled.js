@@ -75,6 +75,26 @@ export const CardButton = styled.button`
   border-radius: 10px;
   cursor: pointer;
   color: #373737;
+  background-color: #ebd8ff;
+  box-shadow: 0px 3.43693px 3.43693px rgba(0, 0, 0, 0.25);
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  font-family: 'Montserrat';
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.22;
+  text-transform: uppercase;
+`;
+
+export const CardButtonActive = styled.button`
+  padding: 14px 56px;
+  text-align: center;
+  border: 0;
+  border-radius: 10px;
+  cursor: pointer;
+  color: #373737;
+  background-color: #5cd3a8;
   box-shadow: 0px 3.43693px 3.43693px rgba(0, 0, 0, 0.25);
 
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
