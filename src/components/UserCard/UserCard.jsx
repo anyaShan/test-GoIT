@@ -18,38 +18,73 @@ import {
 } from './UserCard.styled';
 
 export const UserCard = ({ item }) => {
-  const { user, tweets, followers, avatar } = item;
+  // const { id, user, tweets, followers, avatar } = item;
 
-  const [count, setCount] = useState(followers);
+  // const [state, setState] = useState(item);
+
+  const [count, setCount] = useState(() => {
+    return (
+      JSON.parse(localStorage.getItem(`user-${item.id}`)) ?? item.followers
+    );
+  });
+
+  // const [count, setCount] = useState(item.followers);
   const [isFollow, setIsFollow] = useState('Follow');
   const [colorPlace, setColorPlace] = useState(true);
 
-  useEffect(() => {
-    setCount(JSON.parse(localStorage.getItem('count')));
-    setIsFollow(localStorage.getItem('isFollow'));
-    setColorPlace(JSON.parse(localStorage.getItem('colorPlace')));
-  }, []);
+  // const [count, setCount] = useState(() => {
+  //   const storageCount = localStorage.getItem(`followers-${item.id}`);
+  //   return storageCount ? parseInt(storageCount) : item.followers;
+  // });
+
+  // useEffect(() => {
+  //   setCount(JSON.parse(localStorage.getItem('count')));
+  //   setIsFollow(localStorage.getItem('isFollow'));
+  //   setColorPlace(JSON.parse(localStorage.getItem('colorPlace')));
+  // }, []);
+
+  // useEffect(() => {
+  //   localStorage.setItem('count', count);
+  //   localStorage.setItem('isFollow', isFollow);
+  //   localStorage.setItem('colorPlace', colorPlace);
+  // }, [colorPlace, count, isFollow]);
 
   useEffect(() => {
-    localStorage.setItem('count', count);
-    localStorage.setItem('isFollow', isFollow);
-    localStorage.setItem('colorPlace', colorPlace);
-  }, [colorPlace, count, isFollow]);
+    localStorage.setItem(`user-${item.id}`, count);
+  }, [count, item.id]);
+
+  // const updateCount = () => {
+  //   if (isFollow === 'Follow') {
+  //     setCount(count + 1);
+  //     setIsFollow('Following');
+  //     setColorPlace(false);
+  //   }
+
+  //   if (isFollow !== 'Follow') {
+  //     setCount(count - 1);
+
+  //     setIsFollow('Follow');
+  //     setColorPlace(true);
+  //   }
+  // };
 
   const updateCount = () => {
-    if (isFollow === 'Follow') {
+    if (count === item.followers) {
       setCount(count + 1);
       setIsFollow('Following');
       setColorPlace(false);
-    }
-
-    if (isFollow !== 'Follow') {
+    } else {
       setCount(count - 1);
-
       setIsFollow('Follow');
       setColorPlace(true);
     }
   };
+
+  // const updateHandleUser = count => {
+  //   console.log(state);
+  //   setState(prevState => ({ ...prevState, followers: count }));
+  //   onCange(state);
+  // };
 
   const validCount = new Intl.NumberFormat('en-US').format(count);
 
@@ -61,8 +96,8 @@ export const UserCard = ({ item }) => {
         <CardAvatar src={BoyImg} alt="boy" />
         <CardAvatarLine></CardAvatarLine>
       </CardAvatarWrapp>
-      <CardName>{user}</CardName>
-      <CardTweets>{tweets} tweets</CardTweets>
+      <CardName>{item.user}</CardName>
+      <CardTweets>{item.tweets} tweets</CardTweets>
       <CardCount>{validCount} Followers</CardCount>
       <CardButton
         type="button"

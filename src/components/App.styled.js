@@ -5,10 +5,6 @@ export const Container = styled.div`
   padding: 25px;
   display: flex;
 
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 500;
