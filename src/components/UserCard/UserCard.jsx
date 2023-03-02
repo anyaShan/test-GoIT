@@ -11,6 +11,7 @@ import {
   CardAvatarWrapp,
   CardAvatarLine,
   CardAvatar,
+  CardName,
   CardTweets,
   CardCount,
   CardButton,
@@ -60,7 +61,7 @@ export const UserCard = ({ item }) => {
         <CardAvatar src={BoyImg} alt="boy" />
         <CardAvatarLine></CardAvatarLine>
       </CardAvatarWrapp>
-      <p>{user}</p>
+      <CardName>{user}</CardName>
       <CardTweets>{tweets} tweets</CardTweets>
       <CardCount>{validCount} Followers</CardCount>
       <CardButton

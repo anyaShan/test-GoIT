@@ -56,6 +56,10 @@ export const CardAvatar = styled.img`
   transform: translate(-50%, -50%);
 `;
 
+export const CardName = styled.p`
+  margin-bottom: 16px;
+`;
+
 export const CardTweets = styled.p`
   margin-bottom: 16px;
 `;
