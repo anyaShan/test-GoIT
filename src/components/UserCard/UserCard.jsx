@@ -19,12 +19,12 @@ import {
 export const UserCard = () => {
   const [count, setCount] = useState(100500);
   const [isFollow, setIsFollow] = useState('Follow');
-  const [colorPlace, setcolorPlace] = useState(true);
+  const [colorPlace, setColorPlace] = useState(true);
 
   useEffect(() => {
     setCount(JSON.parse(localStorage.getItem('count')));
     setIsFollow(localStorage.getItem('isFollow'));
-    setcolorPlace(JSON.parse(localStorage.getItem('colorPlace')));
+    setColorPlace(JSON.parse(localStorage.getItem('colorPlace')));
   }, []);
 
   useEffect(() => {
@@ -37,14 +37,14 @@ export const UserCard = () => {
     if (isFollow === 'Follow') {
       setCount(count + 1);
       setIsFollow('Following');
-      setcolorPlace(false);
+      setColorPlace(false);
     }
 
     if (isFollow !== 'Follow') {
       setCount(count - 1);
 
       setIsFollow('Follow');
-      setcolorPlace(true);
+      setColorPlace(true);
     }
   };
 
