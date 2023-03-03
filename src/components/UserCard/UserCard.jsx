@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { useLocalStorage } from '../Hooks/useLocalStorage';
 
 import BgImg from '../../img/picture.svg';
 import LogoImg from '../../img/logo.svg';
@@ -21,53 +22,7 @@ import {
 export const UserCard = ({ item }) => {
   // const { id, user, tweets, followers, avatar } = item;
 
-  // const [state, setState] = useState(item);
-
-  const [count, setCount] = useState(() => {
-    return (
-      JSON.parse(localStorage.getItem(`user-${item.id}`)) ?? item.followers
-    );
-  });
-
-  // const [count, setCount] = useState(item.followers);
-  // const [isFollow, setIsFollow] = useState('Follow');
-  // const [colorPlace, setColorPlace] = useState(true);
-
-  // const [count, setCount] = useState(() => {
-  //   const storageCount = localStorage.getItem(`followers-${item.id}`);
-  //   return storageCount ? parseInt(storageCount) : item.followers;
-  // });
-
-  // useEffect(() => {
-  //   setCount(JSON.parse(localStorage.getItem('count')));
-  //   setIsFollow(localStorage.getItem('isFollow'));
-  //   setColorPlace(JSON.parse(localStorage.getItem('colorPlace')));
-  // }, []);
-
-  // useEffect(() => {
-  //   localStorage.setItem('count', count);
-  //   localStorage.setItem('isFollow', isFollow);
-  //   localStorage.setItem('colorPlace', colorPlace);
-  // }, [colorPlace, count, isFollow]);
-
-  useEffect(() => {
-    localStorage.setItem(`user-${item.id}`, count);
-  }, [count, item.id]);
-
-  // const updateCount = () => {
-  //   if (isFollow === 'Follow') {
-  //     setCount(count + 1);
-  //     setIsFollow('Following');
-  //     setColorPlace(false);
-  //   }
-
-  //   if (isFollow !== 'Follow') {
-  //     setCount(count - 1);
-
-  //     setIsFollow('Follow');
-  //     setColorPlace(true);
-  //   }
-  // };
+  const [count, setCount] = useLocalStorage(item.id, item.followers);
 
   const countIncrement = () => {
     setCount(count + 1);
@@ -76,12 +31,6 @@ export const UserCard = ({ item }) => {
   const countDecrement = () => {
     setCount(count - 1);
   };
-
-  // const updateHandleUser = count => {
-  //   console.log(state);
-  //   setState(prevState => ({ ...prevState, followers: count }));
-  //   onCange(state);
-  // };
 
   const validCount = new Intl.NumberFormat('en-US').format(count);
 
