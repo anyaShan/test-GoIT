@@ -1,10 +1,18 @@
+import boyOne from './img/usersfoto/boy-1.png';
+import boyTwo from './img/usersfoto/boy-2.png';
+import boyThree from './img/usersfoto/boy-3.png';
+import girlOne from './img/usersfoto/girl-1.png';
+import girlTwo from './img/usersfoto/girl-2.png';
+import girlThree from './img/usersfoto/girl-3.png';
+import girlFour from './img/usersfoto/girl-4.png';
+
 export const INITIAL_USERS = [
   {
     id: 1,
     user: 'Elon Reeve Musk',
     tweets: 777,
     followers: 100500,
-    avatar: 'url.jpg',
+    avatar: boyOne,
   },
 
   {
@@ -12,7 +20,7 @@ export const INITIAL_USERS = [
     user: 'Rosie Simpson',
     tweets: 7586,
     followers: 566623,
-    avatar: 'url.jpg',
+    avatar: girlOne,
   },
 
   {
@@ -20,7 +28,7 @@ export const INITIAL_USERS = [
     user: 'Hermione Kline',
     tweets: 153,
     followers: 80009,
-    avatar: 'url.jpg',
+    avatar: girlTwo,
   },
 
   {
@@ -28,7 +36,7 @@ export const INITIAL_USERS = [
     user: 'Eden Clements',
     tweets: 23,
     followers: 1005,
-    avatar: 'url.jpg',
+    avatar: boyTwo,
   },
 
   {
@@ -36,7 +44,7 @@ export const INITIAL_USERS = [
     user: 'Annie Copeland',
     tweets: 36685,
     followers: 562220,
-    avatar: 'url.jpg',
+    avatar: girlThree,
   },
 
   {
@@ -44,7 +52,7 @@ export const INITIAL_USERS = [
     user: 'Anastasiia Andrik',
     tweets: 1053,
     followers: 2500023,
-    avatar: 'url.jpg',
+    avatar: girlFour,
   },
 
   {
@@ -52,6 +60,6 @@ export const INITIAL_USERS = [
     user: 'Sergio Tomerland',
     tweets: 5694,
     followers: 55500069,
-    avatar: 'url.jpg',
+    avatar: boyThree,
   },
 ];

@@ -40,7 +40,8 @@ export const UserCard = ({ item }) => {
       <CardBgImg src={BgImg} alt="tooltip" />
       <CardAvatarWrapp>
         <CardAvatarLine></CardAvatarLine>
-        <CardAvatar src={HanselImg} alt="" />
+        <CardAvatar src={avatar} alt="" />
+        {/* <CardAvatar src={HanselImg} alt="" /> */}
         <CardAvatarBorder />
       </CardAvatarWrapp>
       <CardName>{user}</CardName>
