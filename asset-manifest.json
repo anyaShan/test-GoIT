@@ -1,16 +1,22 @@
 {
   "files": {
-    "main.css": "/test-GoIT/static/css/main.dfd1617b.css",
-    "main.js": "/test-GoIT/static/js/main.3659e859.js",
-    "static/media/boy.svg": "/test-GoIT/static/media/boy.efeb78ce852bb5997c3c4e9216142446.svg",
+    "main.css": "/test-GoIT/static/css/main.8e95e59f.css",
+    "main.js": "/test-GoIT/static/js/main.bf54aa4e.js",
     "static/media/picture.svg": "/test-GoIT/static/media/picture.23dcbc3cc8ccc9682f24b4acffb5efb2.svg",
+    "static/media/girl-4.png": "/test-GoIT/static/media/girl-4.bfb9c6b08b90a39b2015.png",
+    "static/media/boy-2.png": "/test-GoIT/static/media/boy-2.1b2c5af0740802254de9.png",
+    "static/media/boy-3.png": "/test-GoIT/static/media/boy-3.3ca9dd66cac94ce39722.png",
+    "static/media/boy-1.png": "/test-GoIT/static/media/boy-1.f2bfdf4f09c8b9125f9a.png",
+    "static/media/girl-1.png": "/test-GoIT/static/media/girl-1.4ad1ed1d4616a5aff9ed.png",
+    "static/media/girl-2.png": "/test-GoIT/static/media/girl-2.1e445feb3dbbba53af3a.png",
+    "static/media/girl-3.png": "/test-GoIT/static/media/girl-3.fc0d67b15504fb3dbc87.png",
     "static/media/logo.svg": "/test-GoIT/static/media/logo.e917114d7945c04c85a8946a331d28b6.svg",
     "index.html": "/test-GoIT/index.html",
-    "main.dfd1617b.css.map": "/test-GoIT/static/css/main.dfd1617b.css.map",
-    "main.3659e859.js.map": "/test-GoIT/static/js/main.3659e859.js.map"
+    "main.8e95e59f.css.map": "/test-GoIT/static/css/main.8e95e59f.css.map",
+    "main.bf54aa4e.js.map": "/test-GoIT/static/js/main.bf54aa4e.js.map"
   },
   "entrypoints": [
-    "static/css/main.dfd1617b.css",
-    "static/js/main.3659e859.js"
+    "static/css/main.8e95e59f.css",
+    "static/js/main.bf54aa4e.js"
   ]
 }
