@@ -1,9 +1,8 @@
-import { useState, useEffect } from 'react';
 import { useLocalStorage } from '../Hooks/useLocalStorage';
 
 import BgImg from '../../img/picture.svg';
 import LogoImg from '../../img/logo.svg';
-import BoyImg from '../../img/boy.svg';
+import HanselImg from '../../img/hansel.svg';
 
 import {
   CardContainer,
@@ -17,12 +16,13 @@ import {
   CardCount,
   CardButton,
   CardButtonActive,
+  CardAvatarBorder,
 } from './UserCard.styled';
 
 export const UserCard = ({ item }) => {
-  // const { id, user, tweets, followers, avatar } = item;
+  const { id, user, tweets, followers, avatar } = item;
 
-  const [count, setCount] = useLocalStorage(item.id, item.followers);
+  const [count, setCount] = useLocalStorage(id, followers);
 
   const countIncrement = () => {
     setCount(count + 1);
@@ -39,14 +39,15 @@ export const UserCard = ({ item }) => {
       <CardLogo src={LogoImg} alt="logo" />
       <CardBgImg src={BgImg} alt="tooltip" />
       <CardAvatarWrapp>
-        <CardAvatar src={BoyImg} alt="boy" />
         <CardAvatarLine></CardAvatarLine>
+        <CardAvatar src={HanselImg} alt="" />
+        <CardAvatarBorder />
       </CardAvatarWrapp>
-      <CardName>{item.user}</CardName>
-      <CardTweets>{item.tweets} tweets</CardTweets>
+      <CardName>{user}</CardName>
+      <CardTweets>{tweets} tweets</CardTweets>
       <CardCount>{validCount} Followers</CardCount>
 
-      {count === item.followers ? (
+      {count === followers ? (
         <CardButton type="button" onClick={countIncrement}>
           Follow
         </CardButton>
