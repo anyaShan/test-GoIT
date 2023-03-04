@@ -39,7 +39,7 @@ export const UserCard = ({ item }) => {
       <CardBgImg src={BgImg} alt="tooltip" />
       <CardAvatarWrapp>
         <CardAvatarLine></CardAvatarLine>
-        <CardAvatar src={avatar} alt="" />
+        <CardAvatar src={avatar} alt="avatar" />
         <CardAvatarBorder />
       </CardAvatarWrapp>
       <CardName>{user}</CardName>
