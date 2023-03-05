@@ -1,11 +1,9 @@
 import { useLocalStorage } from '../Hooks/useLocalStorage';
 
-import BgImg from '../../img/picture.svg';
 import LogoImg from '../../img/logo.svg';
 
 import {
   CardContainer,
-  CardBgImg,
   CardLogo,
   CardAvatarWrapp,
   CardAvatar,
@@ -14,7 +12,6 @@ import {
   CardCount,
   CardButton,
   CardButtonActive,
-  CardAvatarBorder,
 } from './UserCard.styled';
 
 export const UserCard = ({ item }) => {
@@ -35,10 +32,8 @@ export const UserCard = ({ item }) => {
   return (
     <CardContainer>
       <CardLogo src={LogoImg} alt="logo" />
-      <CardBgImg src={BgImg} alt="tooltip" />
       <CardAvatarWrapp>
         <CardAvatar src={avatar} alt="avatar" />
-        {/* <CardAvatarBorder /> */}
       </CardAvatarWrapp>
       <CardName>{user}</CardName>
       <CardTweets>{tweets} tweets</CardTweets>

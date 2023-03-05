@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import BgImg from '../../img/picture.svg';
 
 export const CardContainer = styled.div`
   position: relative;
@@ -6,14 +7,13 @@ export const CardContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 28px 0 36px 0;
+  padding: 0 0 36px 0;
 
-  background: linear-gradient(
-    114.99deg,
-    #471ca9 -0.99%,
-    #5736a3 54.28%,
-    #4b2a99 78.99%
-  );
+  background-image: url(${BgImg}),
+    linear-gradient(114.99deg, #471ca9 -0.99%, #5736a3 54.28%, #4b2a99 78.99%);
+  background-repeat: no-repeat;
+  background-size: 308px, cover;
+  background-position: top 28px center, center;
   box-shadow: -2.5777px 6.87386px 20.6216px rgba(0, 0, 0, 0.23);
   border-radius: 20px;
 `;
@@ -24,12 +24,9 @@ export const CardLogo = styled.img`
   left: 20px;
 `;
 
-export const CardBgImg = styled.img`
-  margin-bottom: 18px;
-`;
-
 export const CardAvatarWrapp = styled.div`
   position: relative;
+  margin-top: 214px;
   width: 100%;
   margin-bottom: 62px;
 
@@ -73,21 +70,6 @@ export const CardAvatar = styled.img`
   background-color: #5736a3;
   border-radius: 50%;
   z-index: 1;
-`;
-export const CardAvatarBorder = styled.div`
-  display: block;
-  position: absolute;
-  width: 80px;
-  height: 80px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: #ebd8ff;
-  border-radius: 50%;
-  box-shadow: 0px 4.39163px 4.39163px rgba(0, 0, 0, 0.06),
-    inset 0px -2.19582px 4.39163px #ae7be3,
-    inset 0px 4.39163px 3.29372px #fbf8ff;
 `;
 
 export const CardName = styled.p`
