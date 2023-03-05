@@ -32,13 +32,18 @@ export const CardAvatarWrapp = styled.div`
   position: relative;
   width: 100%;
   margin-bottom: 62px;
-`;
-
-export const CardAvatarLine = styled.div`
-  height: 8px;
-  background: #ebd8ff;
-  box-shadow: 0px 3.43693px 3.43693px rgba(0, 0, 0, 0.06),
-    inset 0px -1.71846px 3.43693px #ae7be3, inset 0px 3.43693px 2.5777px #fbf8ff;
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    height: 8px;
+    width: 100%;
+    background: #ebd8ff;
+    box-shadow: 0px 3.43693px 3.43693px rgba(0, 0, 0, 0.06),
+      inset 0px -1.71846px 3.43693px #ae7be3,
+      inset 0px 3.43693px 2.5777px #fbf8ff;
+  }
 `;
 
 export const CardAvatar = styled.img`

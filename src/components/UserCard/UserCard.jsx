@@ -8,7 +8,6 @@ import {
   CardBgImg,
   CardLogo,
   CardAvatarWrapp,
-  CardAvatarLine,
   CardAvatar,
   CardName,
   CardTweets,
@@ -38,7 +37,6 @@ export const UserCard = ({ item }) => {
       <CardLogo src={LogoImg} alt="logo" />
       <CardBgImg src={BgImg} alt="tooltip" />
       <CardAvatarWrapp>
-        <CardAvatarLine></CardAvatarLine>
         <CardAvatar src={avatar} alt="avatar" />
         <CardAvatarBorder />
       </CardAvatarWrapp>
