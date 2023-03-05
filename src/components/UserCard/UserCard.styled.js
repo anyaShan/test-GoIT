@@ -97,6 +97,10 @@ export const CardButton = styled.button`
   font-size: 18px;
   line-height: 1.22;
   text-transform: uppercase;
+
+  &:hover {
+    background-color: #5cd3a8;
+  }
 `;
 
 export const CardButtonActive = styled.button`
@@ -116,4 +120,8 @@ export const CardButtonActive = styled.button`
   font-size: 18px;
   line-height: 1.22;
   text-transform: uppercase;
+
+  &:hover {
+    background-color: #ebd8ff;
+  }
 `;
