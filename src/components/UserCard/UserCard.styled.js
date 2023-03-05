@@ -32,6 +32,7 @@ export const CardAvatarWrapp = styled.div`
   position: relative;
   width: 100%;
   margin-bottom: 62px;
+
   &::before {
     content: '';
     display: block;
@@ -43,6 +44,22 @@ export const CardAvatarWrapp = styled.div`
     box-shadow: 0px 3.43693px 3.43693px rgba(0, 0, 0, 0.06),
       inset 0px -1.71846px 3.43693px #ae7be3,
       inset 0px 3.43693px 2.5777px #fbf8ff;
+  }
+
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ebd8ff;
+    border-radius: 50%;
+    box-shadow: 0px 4.39163px 4.39163px rgba(0, 0, 0, 0.06),
+      inset 0px -2.19582px 4.39163px #ae7be3,
+      inset 0px 4.39163px 3.29372px #fbf8ff;
   }
 `;
 

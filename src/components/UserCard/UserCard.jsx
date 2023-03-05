@@ -38,7 +38,7 @@ export const UserCard = ({ item }) => {
       <CardBgImg src={BgImg} alt="tooltip" />
       <CardAvatarWrapp>
         <CardAvatar src={avatar} alt="avatar" />
-        <CardAvatarBorder />
+        {/* <CardAvatarBorder /> */}
       </CardAvatarWrapp>
       <CardName>{user}</CardName>
       <CardTweets>{tweets} tweets</CardTweets>
