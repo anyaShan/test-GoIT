@@ -16,6 +16,13 @@ export const CardContainer = styled.div`
   background-position: top 28px center, center;
   box-shadow: -2.5777px 6.87386px 20.6216px rgba(0, 0, 0, 0.23);
   border-radius: 20px;
+
+  scale: 1;
+  transition: scale 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover {
+    scale: 1.03;
+  }
 `;
 
 export const CardLogo = styled.img`
@@ -103,7 +110,7 @@ export const CardButton = styled.button`
   text-transform: uppercase;
 
   &:hover {
-    background-color: #5cd3a8;
+    background-color: #baadc8;
   }
 `;
 
@@ -126,6 +133,6 @@ export const CardButtonActive = styled.button`
   text-transform: uppercase;
 
   &:hover {
-    background-color: #ebd8ff;
+    background-color: #4dae8b;
   }
 `;
